@@ -28,7 +28,7 @@ export default function Home() {
             </div>
             <div className="w-1/2 p-4 flex-col flex rounded-lg items-center">
               <Image
-                src="/pexels.jpg"
+                src="/Academy_1.jpg"
                 alt="home banner"
                 width={286 * 1.5}
                 height={190 * 1.5}
@@ -50,7 +50,7 @@ export default function Home() {
               <Image
                 className="absolute bottom-2 left-3 rounded-sm"
                 alt="image1"
-                src="/pexels.jpg"
+                src="/Academy_3.jpg"
                 width={429}
                 height={285}
               />

@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 const NavArray = [
-  { title: "News", href: "/news" },
   { title: "Onboarding", href: "/onboarding" },
   { title: "Courses", href: "/courses" },
   { title: "New Proposals", href: "/new-proposals" },
@@ -18,9 +17,17 @@ const Nav = () => {
       <nav className="container  flex max-w-[1500px] justify-center w-full">
         <div className="w-full max-w-[1300px] items-center flex justify-between">
           <Link href="/">
-            <Image src="/icon.png" alt="icon" width={150} height={150} />
+            <Image src="/icon.png" alt="icon" width={160} height={100} />
           </Link>
           <ul className="flex space-x-6">
+            <a
+              className="font-bold hover:text-lightblue"
+              href="https://hella.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              News
+            </a>
             {NavArray.map((item) => (
               <li key={item.title}>
                 <Link
