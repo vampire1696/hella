@@ -56,7 +56,7 @@ const FormReview = ({ product_id }) => {
             <Textarea
               required
               name="reviewContent"
-              placeholder="Type your review here."
+              placeholder="Please type your review here."
             />
 
             <Button className="w-[120px]" type="submit">
