@@ -27,7 +27,7 @@ const Courses = async (prop) => {
       />
     );
   }
-  const allTopCategories = await wc.getAllCategories();
+  const allTopCategories = await wc.getAllSubCategoriesByParent();
 
   return (
     <div>

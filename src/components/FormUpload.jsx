@@ -8,7 +8,7 @@ import { Card, CardContent } from "./ui/card";
 
 import { useFormStatus } from "react-dom";
 
-import { createProductFromForm } from "@/actions/actions";
+import { createProductFromForm } from "@/actions/actionFormProductUpload";
 import { toast } from "sonner";
 
 const FormUpload = () => {

@@ -1,10 +1,6 @@
 import axios from "axios";
 
 class Woocomerce {
-  //     constructor(url,options){
-  //         this.url = url;
-  //         this.options = options;
-  //    }
   #axiosInstant;
 
   constructor(baseurl, version) {
@@ -57,6 +53,7 @@ class Woocomerce {
         type: "simple",
         description,
         short_description: "Recommend Product",
+        status: "draft",
         attributes: [
           {
             id: 0,
@@ -94,7 +91,7 @@ class Woocomerce {
       return {};
     }
   }
-  async getAllCategories(parent = 162, per_page = 20) {
+  async getAllSubCategoriesByParent(parent = 162, per_page = 20) {
     try {
       const res = await this.#axiosInstant.get("/products/categories", {
         params: { parent, per_page },

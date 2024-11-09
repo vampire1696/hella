@@ -3,9 +3,6 @@ import { jwtVerify } from "jose";
 const secret = new TextEncoder().encode(process.env.TOKEN_SECRET);
 export async function middleware(request) {
   const token = request.cookies.get("isHellaLogin")?.value;
-
-  // const result = jwt.verify(token, process.env.TOKEN_SECRET);
-  // console.log(result);
   const isTokenValid = await jwtVerify(token, secret, { algorithms: ["HS256"] })
     .then((x) => true)
     .catch((err) => false);

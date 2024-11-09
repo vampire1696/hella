@@ -28,7 +28,7 @@ const Category = async ({ params }) => {
     params.page,
     params.attribute_term
   );
-  const childCategories = await wc.getAllCategories(category.id, 20);
+  const childCategories = await wc.getAllSubCategoriesByParent(category.id, 20);
 
   const allProductsByCategory = allProductsByCategoryRes?.productByCategory;
   return (
